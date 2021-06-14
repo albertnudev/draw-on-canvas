@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw on canvas</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">albertnu</h1>
+    </header>
+    <main class="main">
+        <section class="canvas__contenedor">
+            <h1 class="canvas__title">Dibuja con Canvas con el Mouse</h1>
+            <h3 class="canvas__instructions">Selecciona el tamaño del puntero y color deseado. Luego inicia a dibujar haciendo click con el mouse</h3>
+            <div class="canvas__tools">
+                <div class="tools__pointer">
+                    <label class="pointer__label">✒️ Puntero</label>
+                    <input type="number" id="pointer" min="1" max="5"/>
+                </div>
+                <div class="tools__color">
+                <label class="color__label">🎨 Color</label>
+                <input type="color" id="color"/>
+                </div>
+                <input type="button" class="button" id="eraser" value="💣 Borrar"/>
+                <input type="button" class="button" id="eraser" value="📸 Guardar"/>
+            </div>
+        <canvas id="canvas" class="canvas" width="900px" height="500px"></canvas>
+        </section>
+    </main>
+    <script src="./script.js" async></script>
+    <footer class="footer">Made with 🧡 by albertnu</footer>
+</body>
+</html>

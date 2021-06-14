@@ -1,0 +1,119 @@
+/*
+1. Posicionamiento
+2. Modelo caja (box model)
+3. Tipografia
+4. Visuales
+5. Otros (miselaneo)
+*/
+:root {
+    /* Colores */
+    /*bg = background, hl = higthlight*/
+    --albertnu-red: #FF7777;
+    --albertnu-blue: #00C4F5;
+    --bg-dark: #002E39;
+    --bg-hl-1: #0F3942;
+    --bg-hl-2: #1F434C;
+    --icon-bg: #0093D3;
+    --icon-bg-hl: #1FD2FF;
+    --bd-dark-2: #004B5D;
+    --bd-dark-3: #118AA8;
+    --hl: #6BDAF5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-dark);
+    color: white;
+
+}
+
+.header {
+    background-color: var(--bg-hl-1);
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__title {
+    align-items: center;
+    font-weight: 600;
+    padding-left: 15px;
+    font-size: 2.3rem;
+}
+
+.canvas__contenedor {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canvas__title {
+    font-size: 2rem;
+    align-items: center;
+    font-weight: 700;
+}
+.canvas__instructions {
+    font-size: 1.6rem;
+    margin: 10px 15px;
+}
+
+.canvas__tools {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+.pointer__label, .color__label {
+    font-size: 1.6rem;
+    margin: 0 15px;
+}
+.button {
+    color: white;
+    background-color: var(--icon-bg);
+    box-shadow: inset 0 -3px 0 var(--bd-dark-2);
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+.canvas {
+    background-color: white;
+    margin: 15px 0 15px 0;
+
+}
+.footer {
+    background-color:  var(--bg-hl-1);
+    font-size: 1.8rem;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
