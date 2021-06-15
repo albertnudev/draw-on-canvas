@@ -6,6 +6,7 @@ let drawing = false;
 let pointer = document.getElementById('pointer');
 let color = document.getElementById('color');
 let eraser = document.getElementById('eraser');
+let save = document.getElementById('save');
 
 
 canvas.addEventListener("mousedown", (e) => {
@@ -42,16 +43,23 @@ function drawLine(ctx, x1, y1, x2, y2) {
     ctx.closePath();
 }
 
-eraser.addEventListener("click", borrar, false);
-canvas.addEventListener("resize", resize);
 
+canvas.addEventListener("resize", resize);
 function resize() {
     ctx.canvas.width = canvas.width;
     ctx.canvas.height = canvas.height;
 }
 resize();
 
-function borrar()
-{
+eraser.addEventListener("click", borrar, false);
+function borrar(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+save.addEventListener('click', function() {
+    let link = document.createElement('a');
+    link.download = 'download.jpg';
+    link.href = canvas.toDataURL()
+    link.click();
+    link.delete;
+});

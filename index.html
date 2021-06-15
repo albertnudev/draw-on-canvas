@@ -9,16 +9,23 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/b986cbe7e8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
-        <h1 class="header__title">albertnu</h1>
+        <div class="logo">
+            <a href="#" class="logo__link">
+                <div class="logo__container"></div>
+                    <figure><img loading="lazy" src="/assets/isotipo.svg" alt="albertnu isotipo" height="30">
+                    </figure>
+                    <figure class="logo__name"><img loading="lazy" src="/assets/nombre.svg" alt="albertnu logo" height="30"></figure>
+                </div>
+            </a>
+        </div>
     </header>
     <main class="main">
         <section class="canvas__contenedor">
             <h1 class="canvas__title">Dibuja con Canvas con el Mouse</h1>
-            <h3 class="canvas__instructions">Selecciona el tamaño del puntero y color deseado. Luego inicia a dibujar haciendo click con el mouse</h3>
             <div class="canvas__tools">
                 <div class="tools__pointer">
                     <label class="pointer__label">✒️ Puntero</label>
@@ -28,13 +35,22 @@
                 <label class="color__label">🎨 Color</label>
                 <input type="color" id="color"/>
                 </div>
-                <input type="button" class="button" id="eraser" value="💣 Borrar"/>
-                <input type="button" class="button" id="eraser" value="📸 Guardar"/>
+                <button class="button" id="eraser">💣 Borrar</button>
+                <button class="button" id="save">📸 Guardar</button>
             </div>
         <canvas id="canvas" class="canvas" width="900px" height="500px"></canvas>
         </section>
     </main>
     <script src="./script.js" async></script>
-    <footer class="footer">Made with 🧡 by albertnu</footer>
+    <footer class="footer">
+        <ul>
+            <li class="item__author "><p>Made with 🧡 by albertnu</p>
+            </li>
+            <li><a class="item__instagram" href="https://www.instagram.com/albertnu.dev/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li><a class="item__github" href="https://github.com/albertnudev" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+        </ul>
+    </footer>
 </body>
 </html>
